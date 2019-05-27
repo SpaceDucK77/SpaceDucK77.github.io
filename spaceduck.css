@@ -1,5 +1,5 @@
 body{
-    background-color: #669e77;
+    background-color: #69977a;
     color: #444444;
 }
 
@@ -7,5 +7,12 @@ body{
     padding: 20px;
     text-align: center;
     background: #444444;
-    color: #669e77;
+    color: #CADCD0;
+    font-size: large;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    align: center;
+    border: 6px solid #69977a;
 }
