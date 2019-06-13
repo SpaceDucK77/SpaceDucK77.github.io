@@ -3,6 +3,10 @@ body{
     color: #444444;
 }
 
+table{
+    color: #EEEEEE;
+}
+
 .header{
     padding: 20px;
     text-align: center;
@@ -15,4 +19,9 @@ body{
     top: 0px;
     align: center;
     border: 6px solid #69977a;
+}
+
+
+.menu{
+    color: #EEEEEE;
 }
