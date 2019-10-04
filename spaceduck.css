@@ -11,7 +11,7 @@ table{
     padding: 20px;
     text-align: center;
     background: #444444;
-    color: #CADCD0;
+    color: #CADCD0;/*202 220 208 */
     font-size: large;
     position: fixed;
     left: 0px;
@@ -19,9 +19,15 @@ table{
     top: 0px;
     align: center;
     border: 6px solid #69977a;
+    overflow: auto;
+    
 }
 
 
 .menu{
     color: #EEEEEE;
+}
+
+li{
+    display: inline;
 }
