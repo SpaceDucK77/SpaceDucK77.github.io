@@ -3,12 +3,18 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+@font-face { font-family: JuneBug; src: url('sfmovieposter2.ttf'); }
+body{
+  font-family: JuneBug;
+}
 p {
   text-align: center;
   font-size: 60px;
   margin-top: 0px;
+
 }
-</style>
+
+    </style>
 </head>
 <body>
 
@@ -20,10 +26,10 @@ p {
     <input type="button" value="start" onclick="start()">
   </form>
 
-<h1>
+<!--<h1>
   log
 </h1>
-<p id="log"></p>
+<p id="log"></p> -->
 <p id="demo"></p>
 
 <script>
@@ -34,7 +40,7 @@ function start(){
   var minutes_in = Number(document.getElementById("minutes").value);
   var seconds_in = Number(document.getElementById("seconds").value);
   target = now+(minutes_in*60+seconds_in)*1000;
-  log(target);
+  //log(target);
 //var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 
 // Update the count down every 1 second
@@ -53,19 +59,37 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  var result = "";
+  if (days > 0){
+    result+=days + "d ";
+  }
+  if (result != "" || hours > 0){
+    if (hours < 10){
+      result+="0";
+    }
+    result += hours + ":"
+  }
+  if (minutes < 10){
+    result+="0";
+  }
+  result += minutes + ":";
+  if (seconds < 10){
+    result+="0";
+  }
+  result+=seconds;
+
+  document.getElementById("demo").innerHTML =  result;
 
   // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "Get Ready!";
   }
 }, 1000);}
 
-function log(result){
+/*function log(result){
   document.getElementById("log").innerHTML = result;
-}
+}*/
 start();
 
 </script>
