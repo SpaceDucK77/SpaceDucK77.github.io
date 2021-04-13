@@ -20,6 +20,7 @@ table{
     align: center;
     border: 6px solid #69977a;
     overflow: auto;
+    z-index: 999999;
     
 }
 
