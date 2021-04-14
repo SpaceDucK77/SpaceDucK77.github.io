@@ -10,6 +10,13 @@ function pageLoad() {
     resizeFreezePane();
 }
 
+function addToHeader(filename){
+  var orig = document.getElementsByClassName("header")[0].innerHTML;
+  var newText;
+  newtext =$.get("https://www.spaceduck.se"+filename, function(data){return data;}, 'text');
+  alert(newText);
+}
+
 var addEvent = function (elem, type, eventHandle) {
     if (elem == null || typeof (elem) == 'undefined') return;
     if (elem.addEventListener) {
