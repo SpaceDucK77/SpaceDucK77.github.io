@@ -23,3 +23,7 @@ var addEvent = function (elem, type, eventHandle) {
 
 //also when page is resized.
 addEvent(window, "resize", resizeFreezePane);
+
+$(function(){
+  $("#header").load("https://www.spaceduck.se/header.html");
+});
