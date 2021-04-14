@@ -8,13 +8,14 @@
     <script src="spaceducktest.js"> </script>
     <TITLE>www.SpaceDucK.se</TITLE>
     <link rel="stylesheet" type="text/css" href="https://www.spaceduck.se/spaceduck.css">
+    <script>
+      function toLoad(){
+        addToHeader("invitationals/menurow2.html");
+        pageLoad();
+      }
+    </script>
   </HEAD>
-  <script>
-    function toLoad(){
-      addToHeader("invitationals/menurow2.html");
-      pageLoad();
-    }
-  </script>
+
   <BODY onload="setTimeout('toLoad()',400)">
 
     <div id=header></div>
