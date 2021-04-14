@@ -13,7 +13,7 @@ function pageLoad() {
 function addToHeader(filename){
   var orig = document.getElementsByClassName("header")[0].innerHTML;
   var newText;
-  newtext =$.get("https://www.spaceduck.se"+filename, function(data){return data;}, 'text');
+  newtext =$.get("https://www.spaceduck.se/"+filename, function(data){return data;}, 'text');
   alert(newText);
 }
 
