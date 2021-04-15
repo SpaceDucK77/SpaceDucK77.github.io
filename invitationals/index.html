@@ -8,14 +8,29 @@
     <script src="https://www.spaceduck.se/spaceduck.js"> </script>
     <TITLE>www.SpaceDucK.se</TITLE>
     <link rel="stylesheet" type="text/css" href="https://www.spaceduck.se/spaceduck.css">
+    <link rel="stylesheet" type="text/css" href="https://www.spaceduck.se/jquery.bracket.min.css">
+    <script type="text/javascript" src="https://www.spaceduck.se/jquery.bracket.min.js" ></script>
+    <script type="text/javascript" src="https://www.spaceduck.se/invitationals/my_brackets.js"></script>
   </HEAD>
-  <BODY onload="setTimeout('pageLoad()',200)">
+  <script>
+    function toLoad(){
+      setTimeout("addToHeader('invitationals/menurow2.html')", 200);
+      setTimeout('pageLoad()',400);
+    }
+  </script>
+  <BODY onload="toLoad()">
 
     <div id=header></div>
 
-    <H1>
-      In develpoment, currently poster only.
-    </H1>
-    <img style="border:0px" src="https://www.spaceduck.se/Images/latest_poster.png" />
+    <div id="content">
+      <img style="border:0px" src="https://www.spaceduck.se/Images/latest_poster.png" />
+    </div>
+
+    <div class=tournament ></div>
+
+    <div id="debug"></div>
+
+    </div>
+
   </BODY>
 </HTML>
