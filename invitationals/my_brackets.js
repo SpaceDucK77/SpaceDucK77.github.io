@@ -13,6 +13,7 @@ var the_bracket = null;
 var bracket_on = false;
 
 function auto_bracket(){
+  alert(the_bracket);
   the_bracketvar = setInterval(updateResults(), 10000);
 }
 function updateResults(){
