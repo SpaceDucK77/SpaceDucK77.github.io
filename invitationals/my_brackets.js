@@ -4,8 +4,6 @@ var minimalData = {
     ["Player 3", "Player 4"]  /* second matchup */
   ],
   results : [
-    //[[1,2], [3,4]],       /* first round */
-    //[[4,6], [2,1]]        /* second round */
   ]
 };
 
@@ -15,14 +13,19 @@ function updateResults(){
   }, 'text');
 }
 
+function showBracket() {
+  $(function() {
+    $('.tournament').bracket({
+      init: minimalData /* data to initialize the bracket with */ })
+    });
+}
+
 function startBracket(){
   var toClear = document.getElementById("content");
   while (toClear.firstChild){
     toClear.removeChild(toClear.firstChild);
   }
   updateResults();
-  $(function() {
-    $('.tournament').bracket({
-      init: minimalData /* data to initialize the bracket with */ })
-    });
+  setTimeout("showBracket()", 200);
+  
 };
