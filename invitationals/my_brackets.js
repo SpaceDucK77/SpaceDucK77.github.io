@@ -9,6 +9,7 @@ var minimalData = {
   ]
 };
 
+
 function startBracket(){
   var toClear = document.getElementById("content");
   while (toClear.firstChild){

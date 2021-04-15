@@ -10,6 +10,13 @@ function pageLoad() {
     resizeFreezePane();
 }
 
+function recursiveRemove(item){
+  while (item.firstChild){
+    recursiveRemove(item.firstChild);
+    item.removeChild(item.firstChild);
+  }
+}
+
 function addToHeader(filename){
   var orig = document.getElementsByClassName("header")[0].innerHTML;
   $.get("https://www.spaceduck.se/"+filename, function(newText){
@@ -22,6 +29,7 @@ function changeContent(filename){
   try{
     var toClear = document.getElementsByClassName("tournament");
     while (toClear.firstChild){
+      recursiveRemove(toClear.firstChild);
       toClear.removeChild(toClear.firstChild);
     }
     /*for(i = 0; i < toClear.length; i++){
