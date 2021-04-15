@@ -11,12 +11,14 @@ var minimalData = {
 var initial_bracket_load = true;
 var the_bracket = null;
 var bracket_on = false;
-
+var call_counter = 0;
 function auto_bracket(){
   alert(the_bracket);
   the_bracketvar = setInterval(updateResults(), 10000);
 }
 function updateResults(){
+  call_counter++;
+  document.getElementById("debug").innerHTML=call_counter;
   $.ajax({
       url : "https://www.spaceduck.se/invitationals/results.txt",
       method : "GET",
