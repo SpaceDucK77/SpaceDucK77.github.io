@@ -7,17 +7,16 @@ var minimalData = {
   ]
 };
 
-$.ajax({
-    url : "https://www.spaceduck.se/invitationals/results.txt",
-    method : "GET",
-    cache : false
-})
 
 function updateResults(){
-  $.get("https://www.spaceduck.se/invitationals/results.txt",
-    function(newText){
-      minimalData["results"] = JSON.parse(newText);
-  }, 'text');
+  $.ajax({
+      url : "https://www.spaceduck.se/invitationals/results.txt",
+      method : "GET",
+      cache : false
+      success: function(newText){
+        minimalData["results"] = JSON.parse(newText);
+      }, 'text'),
+      async : false});
 }
 
 function showBracket() {
@@ -33,6 +32,6 @@ function startBracket(){
     toClear.removeChild(toClear.firstChild);
   }
   updateResults();
-  setTimeout("showBracket()", 200);
-  setTimeout("pageLoad()", 400);
+  showBracket();
+  pageLoad();
 };
