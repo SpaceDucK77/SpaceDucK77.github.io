@@ -16,7 +16,8 @@ function updateResults(){
       cache : false,
       success: function(newText){
         minimalData["results"] = JSON.parse(newText);
-      }, 'text'),
+      },
+      dataType : 'text',
       async : initial_bracket_load});
   initial_bracket_load = false;
 }
