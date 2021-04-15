@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="https://www.spaceduck.se/jquery.bracket.min.css">
+<script type="text/javascript" src="https://www.spaceduck.se/jquery.bracket.min.js" ></script>
+
+    <script>
+    var minimalData = {
+    teams : [
+      ["Player 1", "Player 2"], /* first matchup */
+      ["Player 3", "Player 4"]  /* second matchup */
+    ],
+    results : [
+      //[[1,2], [3,4]],       /* first round */
+      //[[4,6], [2,1]]        /* second round */
+    ]
+  }
+
+$(function() {
+    $('.tournament').bracket({
+      init: minimalData /* data to initialize the bracket with */ })
+  });
+    </script>
+
+
+    <div class=tournament ></div>
