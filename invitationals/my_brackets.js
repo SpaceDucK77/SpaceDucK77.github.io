@@ -11,6 +11,7 @@ var minimalData = {
 
 function updateResults(){
   $.get("https://www.spaceduck.se/invitationals/results.txt", function(newText){
+    alert(newText);
     minimalData["results"] = JSON.parse(newText);
   }, 'text');
 }
@@ -20,6 +21,7 @@ function startBracket(){
   while (toClear.firstChild){
     toClear.removeChild(toClear.firstChild);
   }
+  updateResults();
   $(function() {
     $('.tournament').bracket({
       init: minimalData /* data to initialize the bracket with */ })
