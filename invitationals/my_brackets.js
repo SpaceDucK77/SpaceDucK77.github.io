@@ -1,6 +1,6 @@
 var minimalData = {
   teams : [
-    ["Player", "Player 2"], /* first matchup */
+    ["Player 1", "Player 2"], /* first matchup */
     ["Player 3", "Player 4"]  /* second matchup */
   ],
   results : [
@@ -34,6 +34,5 @@ function startBracket(){
   }
   updateResults();
   setTimeout("showBracket()", 200);
-  pageLoad()
-  alert(minimalData);
+  setTimeout("pageLoad()", 400);
 };
