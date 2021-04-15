@@ -15,11 +15,15 @@ var call_counter = 0;
 
 function auto_bracket(){
   alert(the_bracket);
-  the_bracket = setInterval(updateResults, 10000);
+  the_bracket = setInterval(updateResults, 200);
 }
 
 function updateResults(){
   call_counter++;
+  if (call_counter == 2){
+    clearInterval(the_bracket);
+    the_bracket = setInterval(updateResults, 5000);
+  }
   document.getElementById("debug").innerHTML=call_counter;
   $.ajax({
       url : "https://www.spaceduck.se/invitationals/results.txt",
