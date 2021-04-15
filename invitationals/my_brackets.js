@@ -30,4 +30,5 @@ function startBracket(){
   updateResults();
   setTimeout("showBracket()", 200);
   pageLoad()
+  alert(minimalData);
 };
