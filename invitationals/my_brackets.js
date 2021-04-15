@@ -7,9 +7,14 @@ var minimalData = {
   ]
 };
 
+$.ajax({
+    url : "https://www.spaceduck.se/invitationals/results.txt",
+    method : "GET",
+    cache : false
+})
+
 function updateResults(){
-  $.get({url:"https://www.spaceduck.se/invitationals/results.txt",
-   cache:false},
+  $.get("https://www.spaceduck.se/invitationals/results.txt",
     function(newText){
       minimalData["results"] = JSON.parse(newText);
   }, 'text');
