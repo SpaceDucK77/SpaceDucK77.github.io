@@ -9,6 +9,11 @@ var minimalData = {
   ]
 };
 
+function updateResults(){
+  $.get("https://www.spaceduck.se/invitationals/results.txt", function(newText){
+    minimalData["results"] = JSON.parse(newText);
+  }, 'text');
+}
 
 function startBracket(){
   var toClear = document.getElementById("content");
