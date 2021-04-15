@@ -24,7 +24,7 @@ function updateResults(){
     clearInterval(the_bracket);
     the_bracket = setInterval(updateResults, 5000);
   }
-  document.getElementById("debug").innerHTML=call_counter;
+  //document.getElementById("debug").innerHTML=call_counter;
   $.ajax({
       url : "https://www.spaceduck.se/invitationals/results.txt",
       method : "GET",
