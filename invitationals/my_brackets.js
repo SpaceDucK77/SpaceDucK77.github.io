@@ -23,8 +23,9 @@ function updateResults(){
       success: function(newText){
         minimalData["results"] = JSON.parse(newText);
       },
-      dataType : 'text',
-      async : initial_bracket_load});
+      dataType : 'text'//,
+      //async : initial_bracket_load
+    });
   initial_bracket_load = false;
   if(bracket_on){
     showBracket();
