@@ -13,7 +13,7 @@ function updateResults(){
   $.ajax({
       url : "https://www.spaceduck.se/invitationals/results.txt",
       method : "GET",
-      cache : false
+      cache : false,
       success: function(newText){
         minimalData["results"] = JSON.parse(newText);
       }, 'text'),
