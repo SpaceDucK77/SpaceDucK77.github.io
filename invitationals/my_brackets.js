@@ -53,6 +53,7 @@ function startBracket(){
   while (toClear.firstChild){
     toClear.removeChild(toClear.firstChild);
   }
+  call_counter=0;
   if(the_bracket==null){
     auto_bracket();
   }
