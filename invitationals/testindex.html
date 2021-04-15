@@ -12,21 +12,16 @@
   <script>
     function toLoad(){
       addToHeader("invitationals/menurow2.html");
-      pageLoad();
+      setTimeout('pageLoad()',400);
     }
   </script>
-  <BODY onload="setTimeout('toLoad()',400)">
+  <BODY onload="toLoad()">
 
     <div id=header></div>
 
-
-    <H1>
-      In develpoment, currently poster only.
-    </H1>
-    <img style="border:0px" src="https://www.spaceduck.se/Images/latest_poster.png" />
-    <script>
-      ;
-    </script>
+    <div id="content">
+      <img style="border:0px" src="https://www.spaceduck.se/Images/latest_poster.png" />
+    </div>
 
   </BODY>
 </HTML>

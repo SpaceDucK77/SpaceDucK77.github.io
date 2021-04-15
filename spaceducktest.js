@@ -18,6 +18,10 @@ function addToHeader(filename){
   }, 'text');
 }
 
+function changeContent(text){
+  alert(text);
+}
+
 var addEvent = function (elem, type, eventHandle) {
     if (elem == null || typeof (elem) == 'undefined') return;
     if (elem.addEventListener) {
