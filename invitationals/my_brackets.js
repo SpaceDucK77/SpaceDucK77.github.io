@@ -15,7 +15,7 @@ var call_counter = 0;
 
 function auto_bracket(){
   alert(the_bracket);
-  the_bracket = setInterval(updateResults(), 10000);
+  the_bracket = setInterval(updateResults, 10000);
 }
 
 function updateResults(){
