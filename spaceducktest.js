@@ -40,6 +40,10 @@ function changeContent(filename){
   catch(err){
 
   }
+  try{
+    bracket_on=false;
+  }
+  catch(err){}
   $.get("https://www.spaceduck.se/"+filename, function(newText){
     document.getElementById("content").innerHTML = newText;
   }, 'text');

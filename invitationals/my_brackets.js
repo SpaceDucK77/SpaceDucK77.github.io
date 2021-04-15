@@ -4,12 +4,13 @@ var minimalData = {
     ["Player 3", "Player 4"]  /* second matchup */
   ],
   results : [
-      
+
   ]
 };
 
 var initial_bracket_load = true;
 var the_bracket = null;
+var bracket_on = false;
 
 function auto_bracket(){
   the_bracketvar = setInterval(updateResults(), 10000);
@@ -25,6 +26,9 @@ function updateResults(){
       dataType : 'text',
       async : initial_bracket_load});
   initial_bracket_load = false;
+  if(bracket_on){
+    showBracket();
+  }
 }
 
 function showBracket() {
@@ -42,6 +46,6 @@ function startBracket(){
   if(the_bracket==null){
     auto_bracket();
   }
-  showBracket();
+  bracket_on = true;
   pageLoad();
 };
