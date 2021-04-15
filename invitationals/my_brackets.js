@@ -11,7 +11,6 @@ var minimalData = {
 
 function updateResults(){
   $.get("https://www.spaceduck.se/invitationals/results.txt", function(newText){
-    alert(newText);
     minimalData["results"] = JSON.parse(newText);
   }, 'text');
 }
