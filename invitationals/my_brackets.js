@@ -7,6 +7,7 @@ var minimalData = {
   ]
 };
 
+var initial_bracket_load = true;
 
 function updateResults(){
   $.ajax({
@@ -16,7 +17,8 @@ function updateResults(){
       success: function(newText){
         minimalData["results"] = JSON.parse(newText);
       }, 'text'),
-      async : false});
+      async : initial_bracket_load});
+  initial_bracket_load = false;
 }
 
 function showBracket() {
