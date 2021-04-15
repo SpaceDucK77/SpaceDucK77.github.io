@@ -18,8 +18,10 @@ function addToHeader(filename){
   }, 'text');
 }
 
-function changeContent(text){
-  alert(text);
+function changeContent(filename){
+  $.get("https://www.spaceduck.se/"+filename, function(newText){
+    document.getElementById("content").innerHTML = newText;
+  }, 'text');
 }
 
 var addEvent = function (elem, type, eventHandle) {
