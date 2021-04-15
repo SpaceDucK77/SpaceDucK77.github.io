@@ -1,7 +1,7 @@
 var minimalData = {
   teams : [
-    ["Player 1", "Player 2"], /* first matchup */
-    ["Player 3", "Player 4"]  /* second matchup */
+    ["AngelineTammi", "Moistchipxx"], /* first matchup */
+    ["LeeFun", "Chibi_ichig0"]  /* second matchup */
   ],
   results : [
 
