@@ -1,6 +1,6 @@
 var minimalData = {
   teams : [
-    ["Player 1", "Player 2"], /* first matchup */
+    ["Player", "Player 2"], /* first matchup */
     ["Player 3", "Player 4"]  /* second matchup */
   ],
   results : [
@@ -8,8 +8,10 @@ var minimalData = {
 };
 
 function updateResults(){
-  $.get({url:"https://www.spaceduck.se/invitationals/results.txt", cache:false}, function(newText){
-    minimalData["results"] = JSON.parse(newText);
+  $.get({url:"https://www.spaceduck.se/invitationals/results.txt",
+   cache:false},
+    function(newText){
+      minimalData["results"] = JSON.parse(newText);
   }, 'text');
 }
 
