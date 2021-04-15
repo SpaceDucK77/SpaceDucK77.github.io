@@ -19,6 +19,14 @@ function addToHeader(filename){
 }
 
 function changeContent(filename){
+  try{
+    var toClear = document.getElementsByClassName("tournament");
+    for(i = 0; i < toClear.length; i++){
+      toClear.innerHTML[i]="";
+  };
+  catch(err){
+
+  };
   $.get("https://www.spaceduck.se/"+filename, function(newText){
     document.getElementById("content").innerHTML = newText;
   }, 'text');
