@@ -27,11 +27,12 @@ function addToHeader(filename){
 
 function changeContent(filename){
   try{
-    var toClear = document.getElementsByClassName("tournament");
-    while (toClear.firstChild){
+    //var toClear = document.getElementsByClassName("tournament");
+    $(".tournament").html("");
+    /*while (toClear.firstChild){
       recursiveRemove(toClear.firstChild);
       toClear.removeChild(toClear.firstChild);
-    }
+    }*/
     /*for(i = 0; i < toClear.length; i++){
       toClear[i].innerHTML="";
     }*/
