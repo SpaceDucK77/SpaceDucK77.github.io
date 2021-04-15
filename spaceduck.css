@@ -21,7 +21,7 @@ table{
     border: 6px solid #69977a;
     overflow: auto;
     z-index: 999999;
-    
+
 }
 
 
@@ -32,3 +32,11 @@ table{
 li{
     display: inline;
 }
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
