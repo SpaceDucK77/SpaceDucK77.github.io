@@ -10,6 +10,10 @@ var minimalData = {
 };
 
 function startBracket(){
+  var toClear = document.getElementById("content");
+  while (toClear.firstChild){
+    toClear.removeChild(toClear.firstChild);
+  }
   $(function() {
     $('.tournament').bracket({
       init: minimalData /* data to initialize the bracket with */ })

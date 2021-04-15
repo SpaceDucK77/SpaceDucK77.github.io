@@ -21,9 +21,12 @@ function addToHeader(filename){
 function changeContent(filename){
   try{
     var toClear = document.getElementsByClassName("tournament");
-    for(i = 0; i < toClear.length; i++){
-      toClear.innerHTML[i]="";
+    while (toClear.firstChild){
+      toClear.removeChild(toClear.firstChild);
     }
+    /*for(i = 0; i < toClear.length; i++){
+      toClear[i].innerHTML="";
+    }*/
   }
   catch(err){
 
