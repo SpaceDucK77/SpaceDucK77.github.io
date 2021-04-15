@@ -23,8 +23,7 @@ function changeContent(filename){
     var toClear = document.getElementsByClassName("tournament");
     for(i = 0; i < toClear.length; i++){
       toClear.innerHTML[i]="";
-  };
-  catch(err){
+  }catch(err){
 
   };
   $.get("https://www.spaceduck.se/"+filename, function(newText){
