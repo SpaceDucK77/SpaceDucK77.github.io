@@ -4,11 +4,16 @@ var minimalData = {
     ["Player 3", "Player 4"]  /* second matchup */
   ],
   results : [
+      
   ]
 };
 
 var initial_bracket_load = true;
+var the_bracket = null;
 
+function auto_bracket(){
+  the_bracketvar = setInterval(updateResults(), 10000);
+}
 function updateResults(){
   $.ajax({
       url : "https://www.spaceduck.se/invitationals/results.txt",
@@ -34,7 +39,9 @@ function startBracket(){
   while (toClear.firstChild){
     toClear.removeChild(toClear.firstChild);
   }
-  updateResults();
+  if(the_bracket==null){
+    auto_bracket();
+  }
   showBracket();
   pageLoad();
 };
