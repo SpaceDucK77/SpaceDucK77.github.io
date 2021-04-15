@@ -8,7 +8,7 @@ var minimalData = {
 };
 
 function updateResults(){
-  $.get("https://www.spaceduck.se/invitationals/results.txt", function(newText){
+  $.get({url:"https://www.spaceduck.se/invitationals/results.txt", cache:false}, function(newText){
     minimalData["results"] = JSON.parse(newText);
   }, 'text');
 }
@@ -27,5 +27,5 @@ function startBracket(){
   }
   updateResults();
   setTimeout("showBracket()", 200);
-  
+  pageLoad()
 };
