@@ -16,7 +16,7 @@ p {
 
     </style>
 </head>
-<body>
+<body onload="startNow()">
 
   <form>
     <label for="minutes">Minutes:</label> <br>
@@ -35,6 +35,27 @@ p {
 <script>
 // Set the date we're counting down to
 var target;
+
+function startNow(){
+  let query=location.search.substring(1);
+  var params = query.split("&")
+  var go = false;
+  for(let i=0; i<params.length;i++){
+    if (params[i].indexOf("m=")==0){
+      document.getElementById("minutes").value = params[i].substring(2);
+    }
+    if (params[i].indexOf("s=")==0){
+      document.getElementById("seconds").value = params[i].substring(2);
+    }
+    if (params[i].indexOf("go=")==0){
+      go=true;
+    }
+  }
+  if(go){
+    start()
+  }
+}
+
 function start(){
   var now = new Date().getTime();
   var minutes_in = Number(document.getElementById("minutes").value);
